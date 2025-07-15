@@ -1,189 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/img/RMS.png" />
-    <!--Google Fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--Fim Google Fontes-->
-    <!--BOOTSTRAP INCONS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!--Fim BOOTSTRAP INCONS-->
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/img/RMS.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+  <title data-lang-key="page_title">Portfólio | Raquel Martins</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="interface">
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#especialidades">Especialidade</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#portfolio">Projetos</a></li>
-                </ul>
-            </nav>
-    
+  <header>
+    <div class="interface">
+      <nav class="menu-desktop">
+        <ul>
+          <li><a href="#topo-do-site" data-lang-key="nav_home">Início</a></li>
+          <li><a href="#sobre" data-lang-key="nav_about">Sobre</a></li>
+          <li><a href="#portfolio" data-lang-key="nav_projects">Projetos</a></li>
+          <li><a href="#skills" data-lang-key="nav_skills">Skills</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <div class="lang-selector">
+          <button id="lang-pt" class="active">PT</button>
+          <span>/</span>
+          <button id="lang-en">EN</button>
+        </div>
+
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+              <i class="bi bi-sun-fill light-icon"></i>
+              <i class="bi bi-moon-fill dark-icon"></i>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="topo-do-site" id="topo-do-site">
+      <div class="interface">
+        <div class="flex">
+          <div class="texto-topo-site">
+            <h1 data-lang-key="hero_title">Desenvolvedora de Software<span>.</span></h1>
+            <p data-lang-key="hero_subtitle">
+              Graduada em Ciência da Computação, entusiasta de tecnologia e focada em criar soluções criativas e funcionais que agregam valor a projetos.
+            </p>
             <div class="contato">
-                <a href="https://api.whatsapp.com/send?phone=5579996582116">
-                    <button>Contato</button>
-                </a>
-            </div> <!--contato-->
-        </div><!--interface-->
-    </header>
-    
-    <main>
-        <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="texto-topo-site">
-                        <h1>Desvolvedora de Software</h1>
-                        <p>
-                            Tenho 24 anos, sou graduada em Ciência da Computação na Universidade Tiradentes. 
-                            Sou uma entusiasta da tecnologia e estou sempre em busca de conhecimento para desenvolver soluções criativas e 
-                            funcionais que possam agregar valor a projetos.
-                            Meu objetivo é encontrar uma oportunidade na área, onde eu possa continuar me aprimorando e me tornando uma 
-                            profissional completa, contribuindo assim para o sucesso da empresa.
-                        </p>
+              <a href="https://api.whatsapp.com/send?phone=5579996582116" target="_blank">
+                <button data-lang-key="hero_contact_btn">Entrar em Contato</button>
+              </a>
+            </div>
+          </div>
+          <div class="img-topo-site">
+            <img src="/img/WhatsApp Image 2023-09-16 at 18.39.37.jpeg" alt="Foto de Raquel Martins" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <div class="contato">
-                            <a href="#formulario">
-                                <button>Entre em Contato</button>
-                            </a>
-                        </div>
+    <section id="sobre">
+      <div class="interface">
+        <div class="flex">
+          <div class="img-sobre">
+            <img src="/img/foto.jpeg" alt="Imagem representativa sobre mim" />
+          </div>
+          <div class="texto-sobre">
+            <h2 data-lang-key="about_title">MUITO PRAZER, <span>SOU RAQUEL MARTINS.</span></h2>
+            <p data-lang-key="about_desc">
+              Formada em Ciência da Computação, tenho grande interesse na área de Front-End e estou sempre buscando aprender e evoluir tecnicamente. Gosto de transformar ideias em interfaces claras e funcionais, com foco na usabilidade e no impacto para o usuário. Também atuo no Back-End com Java, o que amplia minha visão sobre os projetos e me permite colaborar em diferentes etapas do desenvolvimento. Conciliar essas duas áreas ampliou minha perspectiva e vem consolidando meu caminho como desenvolvedora Fullstack. Dedico-me a criar soluções claras, eficientes e alinhadas às boas práticas, contribuindo para a evolução constante dos projetos.
+            </p>
+            <div class="redes-sociais">
+              <a href="https://github.com/Raquel212/" target="_blank"><button><i class="bi bi-github"></i></button></a>
+              <a href="https://www.instagram.com/rcristina706/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+              <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    </div><!--texto-topo-site-->
+    <section id="portfolio">
+      <div class="interface">
+        <h2 class="titulo" data-lang-key="projects_title">Projetos em Destaque</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-card">
+            <img src="/img/MediCare.png" alt="Imagem do Projeto 1" />
+            <h4 data-lang-key="project1_title">MediCare</h4>
+            <p data-lang-key="project1_desc">Plataforma web para gerenciar medicamentos e estoques, ajudando usuários a organizar o uso, aumentar a eficiência e reduzir desperdícios.</p>
+            <a href="https://github.com/Raquel212/MediCareFrontEnd" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
+          </div>
 
-                    <div class="img-topo-site">
-                        <img src="img/WhatsApp Image 2023-09-16 at 18.39.37.jpeg" alt="Imagem">
-                    </div><!--img-topo-site-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--topo-do-site-->
+          <div class="portfolio-card">
+            <img src="/img/VivaNutri.png" alt="Imagem do Projeto 2" />
+            <h4 data-lang-key="project2_title">VivaNutri</h4>
+            <p data-lang-key="project2_desc">Plataforma web que conecta pacientes com transtornos alimentares a profissionais, facilitando o acompanhamento nutricional e psicológico em tempo real.</p>
+            <a href="https://github.com/Raquel212/VivaNutri" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
+          </div>
 
-        <section id="especialidades">
-            <div class="interface">
-                <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span></h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-code-square"></i>
-                        <h3>WebSite</h3>
-                        <p>
-                            Tenho experiência em criar sites profissionais e responsivos, focados em UX, navegabilidade e desempenho. 
-                            Destaco projetos institucionais, sistemas personalizados e landing pages adaptados às necessidades dos clientes.
-                        </p>
-                        
-                    </div><!--especialidades-box-->
+          <div class="portfolio-card">
+            <img src="/img/OnePiece.png" alt="Imagem do Projeto 3" />
+            <h4 data-lang-key="project3_title">One Piece</h4>
+            <p data-lang-key="project3_desc">Site temático desenvolvido para fãs, reunindo informações, curiosidades e conteúdos exclusivos sobre o universo One Piece.</p>
+            <a href="https://github.com/Raquel212/Site_One_Piece" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <div class="especialidades-box">
-                        <i class="bi bi-cart"></i>
-                        <h3>Loja Online</h3>
-                        <p>
-                            Tenho experiência em desenvolver e-commerce com funcionalidades como carrinho de compras, 
-                            integração com sistemas de pagamento e gestão de produtos. Também destaco a análise de vendas para otimizar resultados.
-                        </p>
+    <section id="skills" class="skills-section">
+        <h2 class="titulo" data-lang-key="skills_title">Minhas Skills</h2>
+      <div class="skills-block">
+        <h2>Technical Skills</h2>
+        <div class="skill"><div class="skill-label"><i class="devicon-html5-plain colored"></i><span>HTML</span></div><div class="bar-container"><div class="bar" data-percent="90%" data-width="90%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-css3-plain colored"></i><span>CSS</span></div><div class="bar-container"><div class="bar" data-percent="80%" data-width="80%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div><div class="bar-container"><div class="bar" data-percent="85%" data-width="85%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-react-original colored"></i><span>React</span></div><div class="bar-container"><div class="bar" data-percent="75%" data-width="75%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-electron-original colored"></i><span>Electron</span></div><div class="bar-container"><div class="bar" data-percent="70%" data-width="70%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-react-original colored"></i><span>React Native</span></div><div class="bar-container"><div class="bar" data-percent="70%" data-width="70%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-java-plain colored"></i><span>Java</span></div><div class="bar-container"><div class="bar" data-percent="65%" data-width="65%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-python-plain colored"></i><span>Python</span></div><div class="bar-container"><div class="bar" data-percent="60%" data-width="60%"></div></div></div>
+        <div class="skill"><div class="skill-label"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div><div class="bar-container"><div class="bar" data-percent="65%" data-width="65%"></div></div></div>
+      </div>
 
-                    </div><!--especialidades-box-->
+      <div class="skills-block">
+        <h2>Professional Skills</h2>
+        <div class="professional-grid">
+            <div class="circle-skill"><div class="circle" data-percent="90"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">90%</div></div><p>Creativity</p></div>
+            <div class="circle-skill"><div class="circle" data-percent="70"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">70%</div></div><p>Communication</p></div>
+            <div class="circle-skill"><div class="circle" data-percent="80"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">80%</div></div><p>Problem Solving</p></div>
+            <div class="circle-skill"><div class="circle" data-percent="85"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">85%</div></div><p>Teamwork</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                    <div class="especialidades-box">
-                        <i class="bi bi-wordpress"></i>
-                        <h3>Blog</h3>
-                        <p>
-                            Domino o desenvolvimento de blogs dinâmicos e gerenciáveis, criando sistemas intuitivos de publicação. 
-                            Minha abordagem inclui designs atrativos e funcionais para engajar os usuários.
-                        </p>
+  <footer>
+    <div class="interface">
+      <div class="line-footer">
+        <div class="flex">
+          <div class="redes-sociais">
+            <a href="https://github.com/Raquel212/" target="_blank"><button><i class="bi bi-github"></i></button></a>
+            <a href="https://www.instagram.com/rcristina706/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+            <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+          </div>
+        </div>
+      </div>
 
-                    </div><!--especialidades-box-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--especialidades-->
+      <div class="line-footer borda">
+        <p><i class="bi bi-envelope-fill"></i><a href="mailto:raquelcristinamartins750@gmail.com"> raquelcristinamartins750@gmail.com</a></p>
 
-        <section id="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="img/foto.jpeg" alt="Imagem">
-                    </div><!--img-sobre-->
+      </div>
+    </div>
+  </footer>
 
-                    <div class="texto-sobre">
 
-                        <h2>MUITO PRAZER, <span>SOU RAQUEL MARTINS</span></h2>
-
-                        <p> Sou uma desenvolvedora de software apaixonada por Front-end, dedicada a criar experiências digitais envolventes e intuitivas. Com uma combinação única de habilidades técnicas e criatividade, transformo designs em código, garantindo que cada elemento visual ganhe vida na web. </p>
-                        <p>Minha paixão pelo desenvolvimento front-end vai além do simples código - busco constantemente inovação, acompanho as últimas tendências e me esforço para criar interfaces elegantes que proporcionem uma experiência excepcional aos usuários. Estou sempre em busca de desafios estimulantes e projetos inovadores que me permitam aprimorar minhas habilidades e contribuir para a construção de produtos digitais incríveis. Vamos criar juntos uma presença online impactante e cativante!</p>
-                        <div class="redes-sociais">
-                            <a href="https://github.com/Raquel212/"><button><i class="bi bi-github"></i></button></a>
-                            <a href="https://www.instagram.com/rcristina706/"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/"><button><i class="bi bi-linkedin"></i></button></a>
-                        </div><!--redes-sociais-->
-                    </div><!--texto-sobre-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--sobre-->
-
-        <section id="portfolio">
-            <div class="interface">
-                <h2 class="titulo">MEU <span>PORTFÓLIO</span></h2>
-                <div class="flex">
-                    <a href="https://v1ct0rsb.github.io/CampeonatoFabtech/" target="_blank">
-                        <div class="img-port" style="background-image: url(img/futebol.png);">
-                            <div class="overlay">Projeto 1</div>
-                        </div>
-                    </a>
-                    <a href="https://raquel212.github.io/RVTurismo/" target="_blank">
-                        <div class="img-port" style="background-image: url(img/image.png);">
-                            <div class="overlay">Projeto 2</div>
-                        </div>
-                    </a>
-                    <a href="https://viva-nutri.vercel.app/" target="_blank">
-                        <div class="img-port" style="background-image: url(img/VivaNutri.png);">
-                            <div class="overlay">Projeto 3</div>
-                        </div>
-                    </a>
-
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--portfolio-->
-
-        <section id="formulario">
-            <div class="interface">
-                <h2 class="titulo">FALA <span>COMIGO</span></h2>
-
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome completo: " required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail: " required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-                </form>
-            </div><!--interface-->
-        </section><!--formulario-->
-
-    </main>
-
-    <footer>
-        <div class="interface">
-            <div class="line-footer">
-                <div class="flex">
-                    <!-- <div class="logo-footer">
-                        <img src="" alt="logo-footer">
-                    </div> -->
-
-                    <div class="redes-sociais">
-                        <a href="https://github.com/Raquel212/"><button><i class="bi bi-github"></i></button></a>
-                        <a href="https://www.instagram.com/rcristina706/"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/"><button><i class="bi bi-linkedin"></i></button></a>
-                    </div><!--redes-sociais-->
-                </div><!--flex-->
-            </div><!--line-footer-->
-
-            <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i><a href="mailto:raquelcristinamartins750@gmail.com">raquelcristinamartins750@gmail.com</a></p>
-            </div><!--line-footer-->
-        </div><!--interface-->
-    </footer>
 </body>
+<script src="script.js"></script>
 </html>
