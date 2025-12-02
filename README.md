@@ -9,13 +9,13 @@
 <h2>🚀 Tecnologias</h2>
 <h3>Front-End</h3>
 
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
+- HTML
+- CSS
+- JavaScript
 
 <h3>Hospedagem</h3>
 
-<li>Vercel</li>
+- Vercel
 
 
 
