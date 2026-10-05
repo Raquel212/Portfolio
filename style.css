@@ -61,6 +61,7 @@ body[data-theme="light"] {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -903,7 +904,9 @@ header .interface {
 
 .dial {
   position: relative;
-  width: 152px;
+  width: 100%;
+  max-width: 170px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -926,8 +929,8 @@ header .interface {
 }
 
 .circle-skill { position: relative; z-index: 1; }
-.circle { position: relative; width: 124px; height: 124px; margin: 0 auto; }
-.circle svg { transform: rotate(-90deg); }
+.circle { position: relative; width: 100%; max-width: 134px; aspect-ratio: 1; margin: 0 auto; }
+.circle svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .circle circle { fill: none; stroke-width: 9; }
 .circle .bg { stroke: var(--surface-2); }
 .circle .progress {
@@ -1060,7 +1063,7 @@ header .interface {
   .menu-desktop { display: none; }
   .menu-toggle { display: flex; }
 
-  .hero-grid { grid-template-columns: 1fr; gap: 64px; text-align: center; }
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
   .hero-subtitle { margin-left: auto; margin-right: auto; }
   .hero-scroll { margin-left: auto; margin-right: auto; }
   .hero-visual { order: -1; }
@@ -1076,16 +1079,67 @@ header .interface {
 @media screen and (max-width: 560px) {
   .interface { padding: 0 20px; }
   .section { padding: 78px 0; }
-  .hero { padding: 50px 0 50px; }
+  .hero { padding: 44px 0 46px; }
 
   .header-controls { gap: 10px; }
   .lang-selector { padding: 4px; }
   .lang-selector button { padding: 4px 9px; font-size: 12px; }
 
-  .professional-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 12px; }
-  .panel { padding: 28px 22px; }
+  .hero-grid { gap: 36px; }
+  .hero-title { font-size: clamp(32px, 9vw, 40px); }
+  .hero-subtitle { font-size: 15.5px; margin: 18px auto 26px; }
+  .hero-scroll { margin-top: 42px; }
 
-  .projects-grid { grid-template-columns: 1fr; }
+  .photo-ring { width: min(300px, 76vw); }
+  .about-frame { width: min(300px, 82vw); }
+  .about-visual::before, .about-visual::after { width: 66px; height: 66px; }
+
+  .tech-grid { gap: 20px 12px; }
+  .tech-skill { padding: 14px 6px 12px; }
+  .gauge { width: 84px; height: 84px; }
+
+  .professional-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 10px; }
+  .panel { padding: 28px 20px; }
+
+  .project-media { height: 180px; }
+  .project-body { padding: 6px 20px 24px; }
+  .projects-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  .footer { padding: 40px 0 28px; }
+}
+
+/* Celulares compactos */
+@media screen and (max-width: 420px) {
+  .logo { font-size: 21px; }
+
+  .header-controls { gap: 7px; }
+  .theme-switch { width: 46px; height: 26px; }
+  .theme-switch .slider { padding: 0 6px; }
+  .theme-switch .slider i { font-size: 11px; }
+  .theme-switch .slider::before { height: 18px; width: 18px; left: 3px; top: 3px; }
+  .theme-switch input:checked + .slider::before { transform: translateX(21px); }
+  .lang-selector button { padding: 4px 8px; font-size: 11.5px; }
+  .menu-toggle { width: 42px; height: 42px; }
+
+  .hero-title { font-size: clamp(30px, 9.5vw, 36px); }
+  .section-title { font-size: 27px; margin-bottom: 50px; }
+
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .gauge { width: 82px; height: 82px; }
+
+  .professional-grid { gap: 26px 8px; }
+  .dial { max-width: 150px; }
+
+  .about-content h2 { font-size: 24px; }
+
+  .back-to-top { right: 14px; bottom: 14px; width: 44px; height: 44px; }
+}
+
+/* Esconde o botão "voltar ao topo" enquanto o menu mobile está aberto */
+.mobile-menu.open ~ .back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
 }
 
 @media (prefers-reduced-motion: reduce) {
