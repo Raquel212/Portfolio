@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/img/RMS.png" />
+  <link rel="icon" type="image/png" href="img/RMS.png" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
   <title data-lang-key="page_title">Portfólio | Raquel Martins</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <!-- Barra de progresso de leitura -->
+  <div class="page-progress" id="pageProgress"></div>
+
+  <!-- Fundo com aurora em gradientes neon -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header id="navbar">
     <div class="interface">
-      <nav class="menu-desktop">
+      <a href="#topo-do-site" class="logo" aria-label="Raquel Martins">RM<span>.</span></a>
+
+      <nav class="menu-desktop" aria-label="Menu principal">
         <ul>
           <li><a href="#topo-do-site" data-lang-key="nav_home">Início</a></li>
           <li><a href="#sobre" data-lang-key="nav_about">Sobre</a></li>
@@ -43,128 +55,304 @@
             </div>
           </label>
         </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- Menu mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Menu mobile">
+      <ul>
+        <li><a href="#topo-do-site" data-lang-key="nav_home">Início</a></li>
+        <li><a href="#sobre" data-lang-key="nav_about">Sobre</a></li>
+        <li><a href="#portfolio" data-lang-key="nav_projects">Projetos</a></li>
+        <li><a href="#skills" data-lang-key="nav_skills">Skills</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="skillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" />
+        <stop offset="60%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#ec4899" />
+      </linearGradient>
+      <linearGradient id="gradB" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#ec4899" />
+      </linearGradient>
+      <linearGradient id="gradC" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ec4899" />
+        <stop offset="100%" stop-color="#22d3ee" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <main>
-    <section class="topo-do-site" id="topo-do-site">
+    <!-- HERO -->
+    <section class="hero" id="topo-do-site">
       <div class="interface">
-        <div class="flex">
-          <div class="texto-topo-site">
-            <h1 data-lang-key="hero_title">Desenvolvedora de Software<span>.</span></h1>
-            <p data-lang-key="hero_subtitle">
+        <div class="hero-grid">
+          <div class="hero-content reveal">
+            <h1 class="hero-title">
+              <span data-lang-key="hero_title">Desenvolvedora de Software</span><span class="hero-dot"></span>
+            </h1>
+            <p class="hero-subtitle" data-lang-key="hero_subtitle">
               Graduada em Ciência da Computação, entusiasta de tecnologia e focada em criar soluções criativas e funcionais que agregam valor a projetos.
             </p>
             <div class="contato">
-              <a href="https://api.whatsapp.com/send?phone=5579996582116" target="_blank">
-                <button data-lang-key="hero_contact_btn">Entrar em Contato</button>
+              <a href="https://api.whatsapp.com/send?phone=5579996582116" target="_blank" rel="noopener">
+                <button class="btn-glow" data-lang-key="hero_contact_btn">Entrar em Contato</button>
               </a>
             </div>
+            <div class="hero-scroll" aria-hidden="true">
+              <span class="wheel"></span>
+            </div>
           </div>
-          <div class="img-topo-site">
-            <img src="/img/WhatsApp Image 2023-09-16 at 18.39.37.jpeg" alt="Foto de Raquel Martins" />
+
+          <div class="hero-visual reveal">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="photo-ring">
+              <div class="ring">
+                <img src="img/WhatsApp Image 2023-09-16 at 18.39.37.jpeg" alt="Foto de Raquel Martins" />
+              </div>
+              <span class="orb orb-a"></span>
+              <span class="orb orb-b"></span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sobre">
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
       <div class="interface">
-        <div class="flex">
-          <div class="img-sobre">
-            <img src="/img/foto.jpeg" alt="Imagem representativa sobre mim" />
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-frame">
+              <img src="img/foto.jpeg" alt="Imagem representativa sobre mim" />
+              <span class="glow-blob"></span>
+            </div>
           </div>
-          <div class="texto-sobre">
-            <h2 data-lang-key="about_title">MUITO PRAZER, <span>SOU RAQUEL MARTINS.</span></h2>
+
+          <div class="about-content reveal">
+            <h2 data-lang-key="about_title">MUITO PRAZER, <span>SOU RAQUEL MARTINS</span></h2>
             <p data-lang-key="about_desc">
               Formada em Ciência da Computação, tenho grande interesse na área de Front-End e estou sempre buscando aprender e evoluir tecnicamente. Gosto de transformar ideias em interfaces claras e funcionais, com foco na usabilidade e no impacto para o usuário. Também atuo no Back-End com Java, o que amplia minha visão sobre os projetos e me permite colaborar em diferentes etapas do desenvolvimento. Conciliar essas duas áreas ampliou minha perspectiva e vem consolidando meu caminho como desenvolvedora Fullstack. Dedico-me a criar soluções claras, eficientes e alinhadas às boas práticas, contribuindo para a evolução constante dos projetos.
             </p>
             <div class="redes-sociais">
-              <a href="https://github.com/Raquel212/" target="_blank"><button><i class="bi bi-github"></i></button></a>
-              <a href="https://www.instagram.com/rcristina706/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-              <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+              <a href="https://github.com/Raquel212/" target="_blank" rel="noopener"><button aria-label="GitHub"><i class="bi bi-github"></i></button></a>
+              <a href="https://www.instagram.com/rcristina706/" target="_blank" rel="noopener"><button aria-label="Instagram"><i class="bi bi-instagram"></i></button></a>
+              <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank" rel="noopener"><button aria-label="LinkedIn"><i class="bi bi-linkedin"></i></button></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
+    <!-- PROJETOS -->
+    <section id="portfolio" class="section projects-section">
       <div class="interface">
-        <h2 class="titulo" data-lang-key="projects_title">Projetos em Destaque</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <img src="/img/MediCare.png" alt="Imagem do Projeto 1" />
-            <h4 data-lang-key="project1_title">MediCare</h4>
-            <p data-lang-key="project1_desc">Plataforma web para gerenciar medicamentos e estoques, ajudando usuários a organizar o uso, aumentar a eficiência e reduzir desperdícios.</p>
-            <a href="https://github.com/Raquel212/MediCareFrontEnd" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
-          </div>
+        <h2 class="section-title reveal" data-lang-key="projects_title">Projetos em Destaque</h2>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="img/MediCare.png" alt="Imagem do Projeto 1" />
+              <div class="media-shine"></div>
+            </div>
+            <div class="project-body">
+              <h4 data-lang-key="project1_title">MediCare</h4>
+              <p data-lang-key="project1_desc">Plataforma web para gerenciar medicamentos e estoques, ajudando usuários a organizar o uso, aumentar a eficiência e reduzir desperdícios.</p>
+              <a href="https://github.com/Raquel212/MediCareFrontEnd" target="_blank" rel="noopener" class="project-link">
+                <span data-lang-key="project_cta">Ver Detalhes</span> <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
 
-          <div class="portfolio-card">
-            <img src="/img/DiarioViva.png" alt="Imagem do Projeto 2" />
-            <h4 data-lang-key="project2_title">DiarioViva</h4>
-            <p data-lang-key="project2_desc">Plataforma web desenvolvida para aproximar pacientes e profissionais de saúde, funcionando como um diário digital compartilhado.</p>
-            <a href="https://github.com/Raquel212/DiarioViva" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
-          </div>
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="img/DiarioViva.png" alt="Imagem do Projeto 2" />
+              <div class="media-shine"></div>
+            </div>
+            <div class="project-body">
+              <h4 data-lang-key="project2_title">DiarioViva</h4>
+              <p data-lang-key="project2_desc">Plataforma web desenvolvida para aproximar pacientes e profissionais de saúde, funcionando como um diário digital compartilhado.</p>
+              <a href="https://github.com/Raquel212/DiarioViva" target="_blank" rel="noopener" class="project-link">
+                <span data-lang-key="project_cta">Ver Detalhes</span> <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
 
-          <div class="portfolio-card">
-            <img src="/img/OnePiece.png" alt="Imagem do Projeto 3" />
-            <h4 data-lang-key="project3_title">One Piece</h4>
-            <p data-lang-key="project3_desc">Site temático desenvolvido para fãs, reunindo informações, curiosidades e conteúdos exclusivos sobre o universo One Piece.</p>
-            <a href="https://github.com/Raquel212/Site_One_Piece" target="_blank" data-lang-key="project_cta">Ver Detalhes &rarr;</a>
-          </div>
+          <article class="project-card reveal">
+            <div class="project-media">
+              <img src="img/OnePiece.png" alt="Imagem do Projeto 3" />
+              <div class="media-shine"></div>
+            </div>
+            <div class="project-body">
+              <h4 data-lang-key="project3_title">One Piece</h4>
+              <p data-lang-key="project3_desc">Site temático desenvolvido para fãs, reunindo informações, curiosidades e conteúdos exclusivos sobre o universo One Piece.</p>
+              <a href="https://github.com/Raquel212/Site_One_Piece" target="_blank" rel="noopener" class="project-link">
+                <span data-lang-key="project_cta">Ver Detalhes</span> <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="skills-section">
-        <h2 class="titulo" data-lang-key="skills_title">Minhas Skills</h2>
-      <div class="skills-block">
-        <h2>Technical Skills</h2>
-        <div class="skill"><div class="skill-label"><i class="devicon-html5-plain colored"></i><span>HTML</span></div><div class="bar-container"><div class="bar" data-percent="90%" data-width="90%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-css3-plain colored"></i><span>CSS</span></div><div class="bar-container"><div class="bar" data-percent="80%" data-width="80%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div><div class="bar-container"><div class="bar" data-percent="85%" data-width="85%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-react-original colored"></i><span>React</span></div><div class="bar-container"><div class="bar" data-percent="75%" data-width="75%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-electron-original colored"></i><span>Electron</span></div><div class="bar-container"><div class="bar" data-percent="70%" data-width="70%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-react-original colored"></i><span>React Native</span></div><div class="bar-container"><div class="bar" data-percent="70%" data-width="70%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-java-plain colored"></i><span>Java</span></div><div class="bar-container"><div class="bar" data-percent="65%" data-width="65%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-python-plain colored"></i><span>Python</span></div><div class="bar-container"><div class="bar" data-percent="60%" data-width="60%"></div></div></div>
-        <div class="skill"><div class="skill-label"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div><div class="bar-container"><div class="bar" data-percent="65%" data-width="65%"></div></div></div>
-      </div>
+    <!-- SKILLS -->
+    <section id="skills" class="section skills-section">
+      <div class="interface">
+        <h2 class="section-title reveal" data-lang-key="skills_title">Minhas Skills</h2>
+        <div class="skills-grid">
+          <div class="skills-block panel reveal">
+            <h3 data-lang-key="skills_tech">Habilidades Técnicas</h3>
+            <div class="tech-grid">
+              <div class="tech-skill" style="--d:0s">
+                <div class="gauge" data-percent="90">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-html5-plain colored"></i></span>
+                  <span class="gauge-num">90%</span>
+                </div>
+                <p class="tech-name">HTML</p>
+              </div>
+              <div class="tech-skill" style="--d:.25s">
+                <div class="gauge ring-b" data-percent="80">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-css3-plain colored"></i></span>
+                  <span class="gauge-num">80%</span>
+                </div>
+                <p class="tech-name">CSS</p>
+              </div>
+              <div class="tech-skill" style="--d:.5s">
+                <div class="gauge ring-c" data-percent="85">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-javascript-plain colored"></i></span>
+                  <span class="gauge-num">85%</span>
+                </div>
+                <p class="tech-name">JavaScript</p>
+              </div>
+              <div class="tech-skill" style="--d:.1s">
+                <div class="gauge" data-percent="75">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-react-original colored"></i></span>
+                  <span class="gauge-num">75%</span>
+                </div>
+                <p class="tech-name">React</p>
+              </div>
+              <div class="tech-skill" style="--d:.35s">
+                <div class="gauge ring-b" data-percent="70">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-electron-original colored"></i></span>
+                  <span class="gauge-num">70%</span>
+                </div>
+                <p class="tech-name">Electron</p>
+              </div>
+              <div class="tech-skill" style="--d:.6s">
+                <div class="gauge ring-c" data-percent="70">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-react-original colored"></i></span>
+                  <span class="gauge-num">70%</span>
+                </div>
+                <p class="tech-name">React Native</p>
+              </div>
+              <div class="tech-skill" style="--d:.2s">
+                <div class="gauge" data-percent="65">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-java-plain colored"></i></span>
+                  <span class="gauge-num">65%</span>
+                </div>
+                <p class="tech-name">Java</p>
+              </div>
+              <div class="tech-skill" style="--d:.45s">
+                <div class="gauge ring-b" data-percent="60">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-python-plain colored"></i></span>
+                  <span class="gauge-num">60%</span>
+                </div>
+                <p class="tech-name">Python</p>
+              </div>
+              <div class="tech-skill" style="--d:.7s">
+                <div class="gauge ring-c" data-percent="65">
+                  <svg viewBox="0 0 100 100"><circle class="gauge-bg" cx="50" cy="50" r="42" /><circle class="gauge-fill" cx="50" cy="50" r="42" /></svg>
+                  <span class="gauge-icon"><i class="devicon-mysql-plain colored"></i></span>
+                  <span class="gauge-num">65%</span>
+                </div>
+                <p class="tech-name">MySQL</p>
+              </div>
+            </div>
+          </div>
 
-      <div class="skills-block">
-        <h2>Professional Skills</h2>
-        <div class="professional-grid">
-            <div class="circle-skill"><div class="circle" data-percent="90"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">90%</div></div><p>Creativity</p></div>
-            <div class="circle-skill"><div class="circle" data-percent="70"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">70%</div></div><p>Communication</p></div>
-            <div class="circle-skill"><div class="circle" data-percent="80"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">80%</div></div><p>Problem Solving</p></div>
-            <div class="circle-skill"><div class="circle" data-percent="85"><svg width="120" height="120"><circle class="bg" cx="60" cy="60" r="45" /><circle class="progress" cx="60" cy="60" r="45" /></svg><div class="circle-text">85%</div></div><p>Teamwork</p></div>
+          <div class="skills-block panel reveal">
+            <h3 data-lang-key="skills_prof">Habilidades Profissionais</h3>
+            <div class="professional-grid">
+              <div class="dial">
+                <div class="circle-skill">
+                  <div class="circle" data-percent="90">
+                    <svg width="124" height="124"><circle class="bg" cx="62" cy="62" r="45" /><circle class="progress" cx="62" cy="62" r="45" /></svg>
+                    <div class="circle-text">90%</div>
+                  </div>
+                  <p data-lang-key="skill_creativity">Criatividade</p>
+                </div>
+              </div>
+              <div class="dial">
+                <div class="circle-skill">
+                  <div class="circle" data-percent="70">
+                    <svg width="124" height="124"><circle class="bg" cx="62" cy="62" r="45" /><circle class="progress" cx="62" cy="62" r="45" /></svg>
+                    <div class="circle-text">70%</div>
+                  </div>
+                  <p data-lang-key="skill_communication">Comunicação</p>
+                </div>
+              </div>
+              <div class="dial">
+                <div class="circle-skill">
+                  <div class="circle" data-percent="80">
+                    <svg width="124" height="124"><circle class="bg" cx="62" cy="62" r="45" /><circle class="progress" cx="62" cy="62" r="45" /></svg>
+                    <div class="circle-text">80%</div>
+                  </div>
+                  <p data-lang-key="skill_problem">Resolução de Problemas</p>
+                </div>
+              </div>
+              <div class="dial">
+                <div class="circle-skill">
+                  <div class="circle" data-percent="85">
+                    <svg width="124" height="124"><circle class="bg" cx="62" cy="62" r="45" /><circle class="progress" cx="62" cy="62" r="45" /></svg>
+                    <div class="circle-text">85%</div>
+                  </div>
+                  <p data-lang-key="skill_teamwork">Trabalho em Equipe</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="interface">
-      <div class="line-footer">
-        <div class="flex">
-          <div class="redes-sociais">
-            <a href="https://github.com/Raquel212/" target="_blank"><button><i class="bi bi-github"></i></button></a>
-            <a href="https://www.instagram.com/rcristina706/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
-            <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-          </div>
+      <div class="footer-top">
+        <a href="#topo-do-site" class="logo" aria-label="Raquel Martins">RM<span>.</span></a>
+        <div class="redes-sociais">
+          <a href="https://github.com/Raquel212/" target="_blank" rel="noopener"><button aria-label="GitHub"><i class="bi bi-github"></i></button></a>
+          <a href="https://www.instagram.com/rcristina706/" target="_blank" rel="noopener"><button aria-label="Instagram"><i class="bi bi-instagram"></i></button></a>
+          <a href="https://www.linkedin.com/in/raquel-martins-0092051a2/" target="_blank" rel="noopener"><button aria-label="LinkedIn"><i class="bi bi-linkedin"></i></button></a>
         </div>
       </div>
 
-      <div class="line-footer borda">
+      <div class="footer-bottom">
         <p><i class="bi bi-envelope-fill"></i><a href="mailto:raquelcristinamartins750@gmail.com"> raquelcristinamartins750@gmail.com</a></p>
-
       </div>
     </div>
   </footer>
 
-
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="bi bi-arrow-up"></i></button>
 </body>
 <script src="script.js"></script>
 </html>
