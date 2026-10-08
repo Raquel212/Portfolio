@@ -1,10 +1,8 @@
-// Marca que JS está ativo (evita esconder conteúdo quando JS está desligado)
+
 document.documentElement.classList.add('js');
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* =========================================================
-     DICIONÁRIO DE TRADUÇÕES (mantido igual ao original)
-     ========================================================= */
+
   const translations = {
     pt: {
       page_title: "Portfólio | Raquel Martins",
@@ -58,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* =========================================================
-     TEMA CLARO / ESCURO
+      TEMA CLARO / ESCURO
      ========================================================= */
   const themeSwitcher = document.getElementById('checkbox');
   const currentTheme = localStorage.getItem('theme');
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =========================================================
-     IDIOMA PT / EN
+      IDIOMA PT / EN
      ========================================================= */
   const langPtBtn = document.getElementById('lang-pt');
   const langEnBtn = document.getElementById('lang-en');
